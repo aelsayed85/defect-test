@@ -3,27 +3,37 @@ description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - octocat
+  - aelsayed85
+  - aflaifel-elm
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: module
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Module Name
+      description: Descripe the name of the module related to the issue?
+      placeholder: ex. User Management
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: Also tell us, detailed reproduce steps.
       placeholder: Tell us what you see!
       value: "A bug happened!"
+    validations:
+      required: true
+   - type: textarea
+    id: expected-result
+    attributes:
+      label: What do you expect?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us correct behavior!
+      value: "A success message!"
     validations:
       required: true
   - type: dropdown
@@ -32,31 +42,40 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 1.0.0 (Default)
+        - 1.0.1 (Edge)
     validations:
-      required: true
+      required: false
   - type: dropdown
-    id: browsers
+    id: priority
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Priority
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Blocker
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-  - type: checkboxes
-    id: terms
+    validations:
+      required: false
+  - type: dropdown
+    id: bug-type
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Bug Type
+      multiple: true
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - Function error
+        - Performance error
+        - System Requirement
+        - UI
+        - Enhancement
+    validations:
+      required: true
