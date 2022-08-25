@@ -22,7 +22,7 @@ body:
     id: priority
     attributes:
       label: Priority
-      multiple: true
+      multiple: false
       options:
         - Blocker
         - High
@@ -34,7 +34,7 @@ body:
     id: bug-type
     attributes:
       label: Bug Type
-      multiple: true
+      multiple: false
       options:
         - Function error
         - Performance error
