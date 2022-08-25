@@ -30,7 +30,7 @@ body:
         - Low
     validations:
       required: true
-    - type: dropdown
+  - type: dropdown
     id: bug-type
     attributes:
       label: Bug Type
@@ -79,4 +79,3 @@ body:
       render: shell
     validations:
       required: false
-
