@@ -18,6 +18,31 @@ body:
       placeholder: ex. User Management
     validations:
       required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: true
+      options:
+        - Blocker
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+    - type: dropdown
+    id: bug-type
+    attributes:
+      label: Bug Type
+      multiple: true
+      options:
+        - Function error
+        - Performance error
+        - System Requirement
+        - UI
+        - Enhancement
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -36,28 +61,16 @@ body:
       value: "A success message!"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.0 (Default)
-        - 1.0.1 (Edge)
-    validations:
-      required: false
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      multiple: true
-      options:
-        - Blocker
-        - High
-        - Medium
-        - Low
-    validations:
-      required: true
+#   - type: dropdown
+#     id: version
+#     attributes:
+#       label: Version
+#       description: What version of our software are you running?
+#       options:
+#         - 1.0.0 (Default)
+#         - 1.0.1 (Edge)
+#     validations:
+#       required: false  
   - type: textarea
     id: logs
     attributes:
@@ -66,16 +79,4 @@ body:
       render: shell
     validations:
       required: false
-  - type: dropdown
-    id: bug-type
-    attributes:
-      label: Bug Type
-      multiple: true
-      options:
-        - Function error
-        - Performance error
-        - System Requirement
-        - UI
-        - Enhancement
-    validations:
-      required: true
+
