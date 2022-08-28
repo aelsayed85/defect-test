@@ -13,8 +13,8 @@ body:
   - type: input
     id: epic
     attributes:
-      label: Epic Name
-      description: Descripe the name of the Epic related to the story?
+      label: Epic name
+      description: Descripe the name of the Epic related to the story ?
       placeholder: ex. User Management
     validations:
       required: false
@@ -43,7 +43,7 @@ body:
     id: acceptance-criteria
     attributes:
       label: What do you think is acceptance criteria ?
-      description: Also tell us, what did you expect to accept that story?
+      description: Also tell us, what did you expect to accept that story ?
       placeholder: Tell us correct acceptance criteria!
       value: "A success message!"
     validations:
